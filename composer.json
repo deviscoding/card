@@ -1,0 +1,25 @@
+{
+  "name": "strapless/card",
+  "description": "Card component from Bootstrap 4, modified for usage as a standalone component, with Bootstrap 3, or as part of the StrapLess framework.",
+  "keywords": [
+      "responsive",
+      "card",
+      "panel",
+      "sass",
+      "scss",
+      "strapless",
+      "css"
+  ],
+  "homepage": "https://www.github.com/strapless/card",
+  "version": "1.0",
+  "authors": [
+      {
+          "name": "Aaron M Jones",
+          "homepage": "http://www.jonesiscoding.com"
+      }
+  ],
+  "license": "MIT",
+  "require": {
+    "strapless/base": "^1.0"
+  }
+}
