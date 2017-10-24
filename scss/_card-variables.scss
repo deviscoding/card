@@ -1,9 +1,10 @@
-@import "../../base/scss/base";
-@import "../../colors/scss/colors";
+@import "strapless/base/scss/base";
+@import "strapless/colors/scss/colors";
 
 // Stand Alone Compiling
 $enable-framework:         false !default;
 $grid-gutter-width:        2rem  !default;
+$border-radius-base:       4px   !default;
 
 // Spacing
 $card-spacer-x:            space-x(md) + .25rem !default;
