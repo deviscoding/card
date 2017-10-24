@@ -1,0 +1,332 @@
+@import "card-variables";
+@import "card-mixins";
+
+@if $enable-framework == false {
+  /*!
+   * StrapLess v1.6.1 Cards (http://github.com/strapless/strapless)
+   * Influenced by Bootstrap v4.0 (http://getbootstrap.com)
+   * Licensed under MIT (https://github.com/strapless/strapless/blob/master/LICENSE)
+   */
+}
+
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background-color: $card-bg;
+  @include border-radius($card-border-radius);
+  @if feature(shadows) {
+    @include elevation(2);
+  } @else {
+    border: $card-border-width solid $card-border-color;
+  }
+}
+
+.card-block {
+  // Enable `flex-grow: 1` for decks and groups so that card blocks take up
+  // as much space as possible, ensuring footers are aligned to the bottom.
+  flex: 1 1 auto;
+  padding: $card-spacer-x;
+}
+
+.card-title {
+  margin-bottom: $card-spacer-y;
+}
+
+.card-subtitle {
+  margin-top: -($card-spacer-y / 2);
+  margin-bottom: 0;
+}
+
+.card-text:last-child {
+  margin-bottom: 0;
+}
+
+.card-link {
+  &:hover {
+    text-decoration: none;
+  }
+
+  + .card-link {
+    margin-left: $card-spacer-x;
+  }
+}
+
+.card {
+  > .list-group:first-child {
+    .list-group-item:first-child {
+      @include border-top-radius($card-border-radius);
+    }
+  }
+
+  > .list-group:last-child {
+    .list-group-item:last-child {
+      @include border-bottom-radius($card-border-radius);
+    }
+  }
+}
+
+@if feature(grid) {
+  .card .row > .columns {
+    padding-left: $card-spacer-x;
+    padding-right: $card-spacer-x;
+  }
+}
+
+
+//
+// Optional textual caps
+//
+
+.card-header {
+  padding: $card-spacer-y $card-spacer-x;
+  margin-bottom: 0; // Removes the default margin-bottom of <hN>
+  background-color: $card-cap-bg;
+  border-bottom: $card-border-width solid $card-border-color;
+
+  h1,h2,h3,h4,h5,h6 {
+    margin-bottom: 0;
+  }
+
+  &:first-child {
+    @include border-radius($card-border-radius-inner $card-border-radius-inner 0 0);
+  }
+}
+
+.card-footer {
+  padding: $card-spacer-y $card-spacer-x;
+  background-color: $card-cap-bg;
+  border-top: $card-border-width solid $card-border-color;
+
+  &:last-child {
+    @include border-radius(0 0 $card-border-radius-inner $card-border-radius-inner);
+  }
+}
+
+
+//
+// Header navs
+//
+
+.card-header-tabs {
+  margin-right: -($card-spacer-x / 2);
+  margin-bottom: -$card-spacer-y;
+  margin-left: -($card-spacer-x / 2);
+  border-bottom: 0;
+}
+
+.card-header-pills {
+  margin-right: -($card-spacer-x / 2);
+  margin-left: -($card-spacer-x / 2);
+}
+
+//
+// Background variations
+//
+
+.card-primary {
+  @include card-variant(theme-color("primary"), theme-color("primary"));
+}
+.card-success {
+  @include card-variant(theme-color("success"), theme-color("success"));
+}
+.card-info {
+  @include card-variant(theme-color("info"), theme-color("info"));
+}
+.card-warning {
+  @include card-variant(theme-color("warning"), theme-color("warning"));
+}
+.card-danger {
+  @include card-variant(theme-color("danger"), theme-color("danger"));
+}
+.card-default {
+  @include card-variant($white, $card-border-color);
+}
+
+// Remove all backgrounds
+.card-outline-primary {
+  @include card-outline-variant(theme-color("primary"));
+}
+.card-outline-info {
+  @include card-outline-variant(theme-color("info"));
+}
+.card-outline-success {
+  @include card-outline-variant(theme-color("success"));
+}
+.card-outline-warning {
+  @include card-outline-variant(theme-color("warning"));
+}
+.card-outline-danger {
+  @include card-outline-variant(theme-color("danger"));
+}
+
+//
+// Inverse text within a card for use with dark backgrounds
+//
+
+.card-inverse {
+  @include card-inverse;
+}
+
+//
+// Blockquote
+//
+
+.card-blockquote {
+  padding: 0;
+  margin-bottom: 0;
+  border-left: 0;
+}
+
+// Card image
+.card-img {
+  // margin: -1.325rem;
+  @include border-radius($card-border-radius-inner);
+}
+.card-img-overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: $card-img-overlay-padding;
+}
+
+
+
+// Card image caps
+.card-img-top {
+  @include border-top-radius($card-border-radius-inner);
+}
+.card-img-bottom {
+  @include border-bottom-radius($card-border-radius-inner);
+}
+
+
+// Card deck, group, columns
+@if $enable-framework == false {
+  @include media('>xs') {
+    @include cards-responsive(sm);
+  }
+}
+
+// Accordion Modifications
+.card-accordion {
+  @include elevation(2);
+  @include border-radius($border-radius-base);
+  > .card-default .card-header, .card-header {
+    background-color: #eee;
+    border: $card-border-width solid lighten($card-border-color, 35%);
+    border-width: 1px 0;
+    border-radius: 0;
+  }
+  > .card {
+    margin-bottom: -1px;
+    border-width: 0 1px;
+    box-shadow: none;
+    &:first-child {
+      .card-header {
+        border-top: none;
+      }
+    }
+    @if feature(rounded) {
+      border-radius: 0;
+      &:first-child, &:first-child .card-header {
+        border-top-left-radius: $border-radius-base;
+        border-top-right-radius: $border-radius-base;
+      }
+      &:last-child, &:last-child .card-header {
+        border-bottom-left-radius: $border-radius-base;
+        border-bottom-right-radius: $border-radius-base;
+      }
+    }
+    .card-title {
+      margin: ($card-spacer-y * -1) ($card-spacer-x * -1);
+      @include truncate(unset, false);
+      flex: 0 1 100%;
+      a[data-toggle="collapse"] {
+        font-size: 1.15rem;
+        text-decoration: none;
+        display: block;
+        position: relative;
+        padding: $card-spacer-y $card-spacer-x;
+        font-weight: 500;
+        color: darken($link-color, 15%);
+        outline: 0;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        &:before {
+          position: absolute;
+          right: $card-spacer-x;
+          color: $gray-600;
+          @include icon-font;
+          @include icon-content('chevron-down');
+          //font-size: $icon-font-size-base * 2;
+          @include opacity(.3);
+          line-height: 1;
+        }
+      }
+      a.collapsed:before {
+        @include icon-content('chevron-up');
+      }
+    }
+  }
+}
+
+.card-widget {
+  background-color: $gray-300;
+  color: $gray-800;
+  border: none;
+  @include elevation(1);
+  &[data-toggle] {
+    cursor: pointer;
+  }
+  .card-block {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba($white,.25);
+    > * {
+      margin: 0;
+      opacity: .5;
+    }
+  }
+  .card-footer {
+    background: transparent;
+    border-top-color: transparent;
+    padding-top: 0;
+    padding-bottom: 0;
+    display: flex;
+    align-items: center;
+    .widget-label {
+      font-size: .90rem;
+      font-weight: normal;
+      text-transform: uppercase;
+      padding: .5rem 0;
+      order: -1;
+    }
+  }
+  & + .card-widget {
+    margin-top: 1rem;
+  }
+  &.widget-primary {
+    background-color: theme-color("primary");
+  }
+}
+
+// Icons
+.card.card-icon {
+  > .card-header {
+    display: flex;
+    align-items: center;
+    > .#{$icon-css-prefix} {
+      order: -1;
+      flex: 0 0 auto;
+      top: 1px;
+      opacity: .3;
+      margin: 1px $card-spacer-x 0 0;
+      width: auto;
+
+    }
+  }
+}

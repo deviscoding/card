@@ -1,0 +1,134 @@
+// Card variants
+
+@import "../../base/scss/base";
+@import "card-variables";
+@import "../../scss/icons/icons-mixins";
+
+@mixin card-variant($background, $border) {
+  background-color: $background;
+  border-color: $border;
+
+  .card-header,
+  .card-footer {
+    background-color: transparent;
+  }
+}
+
+@mixin card-outline-variant($color) {
+  background-color: transparent;
+  border-color: $color;
+}
+
+//
+// Inverse text within a card for use with dark backgrounds
+//
+
+@mixin card-inverse {
+  color: rgba(255,255,255,.65);
+
+  .card-header,
+  .card-footer {
+    background-color: transparent;
+    border-color: rgba(255,255,255,.2);
+  }
+  .card-header,
+  .card-footer,
+  .card-title,
+  .card-blockquote {
+    color: #fff;
+  }
+  .card-link,
+  .card-text,
+  .card-subtitle,
+  .card-blockquote .blockquote-footer {
+    color: rgba(255,255,255,.65);
+  }
+  .card-link {
+    &:focus,
+    &:hover {
+      color: $card-link-hover-color;
+    }
+  }
+}
+
+@mixin cards-responsive($bp) {
+  @if $bp == sm {
+    // Card Deck
+    .card-deck {
+      display: flex;
+      flex-flow: row wrap;
+
+      .card {
+        display: flex;
+        flex: 1 0 0;
+        flex-direction: column;
+
+        // Selectively apply horizontal margins to cards to avoid doing the
+        // negative margin dance like our grid. This differs from the grid
+        // due to the use of margins as gutters instead of padding.
+        &:not(:first-child) { margin-left: $card-deck-margin; }
+        &:not(:last-child) { margin-right: $card-deck-margin; }
+      }
+    }
+
+    // Card Group
+    .card-group {
+      display: flex;
+      flex-flow: row wrap;
+
+      .card {
+        flex: 1 0 0;
+
+        + .card {
+          margin-left: 0;
+          border-left: 0;
+        }
+
+        // Handle rounded corners
+        @if feature(rounded) {
+          &:first-child {
+            @include border-right-radius(0);
+
+            .card-img-top {
+              border-top-right-radius: 0;
+            }
+            .card-img-bottom {
+              border-bottom-right-radius: 0;
+            }
+          }
+          &:last-child {
+            @include border-left-radius(0);
+
+            .card-img-top {
+              border-top-left-radius: 0;
+            }
+            .card-img-bottom {
+              border-bottom-left-radius: 0;
+            }
+          }
+
+          &:not(:first-child):not(:last-child) {
+            border-radius: 0;
+
+            .card-img-top,
+            .card-img-bottom {
+              border-radius: 0;
+            }
+          }
+        }
+      }
+    }
+
+    // Card Columns
+    .card-columns {
+      column-count: $card-columns-count;
+      column-gap: $card-columns-gap;
+
+      .card {
+        display: inline-block; // Don't let them vertically span multiple columns
+        width: 100%; // Don't let their width change
+        margin-bottom: $card-columns-margin;
+      }
+    }
+  }
+}
