@@ -22,6 +22,6 @@ $card-columns-margin:       $card-spacer-y !default;
 // Colors
 $card-border-color:        rgba($black,.125) !default;
 $card-border-radius-inner: calc(#{$card-border-radius} - #{$card-border-width}) !default;
-$card-cap-bg:              gray("300"); !default;
+$card-cap-bg:              gray("300") !default;
 $card-bg:                  color("white") !default;
 $card-link-hover-color:    color("white") !default;
