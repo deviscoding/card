@@ -4,14 +4,13 @@
 // Stand Alone Compiling
 $enable-framework:         false !default;
 $grid-gutter-width:        2rem  !default;
-$border-radius-base:       4px   !default;
 
 // Spacing
 $card-spacer-x:            space-x(md) + .25rem !default;
 $card-spacer-y:            space-y(md) + .25rem !default;
 $card-deck-margin:         ($grid-gutter-width / 2) !default;
 $card-border-width:        1px;
-$card-border-radius:       $border-radius-base !default;
+$card-border-radius:       4px; !default; // TODO: Use global border radius!
 $card-img-overlay-padding: $card-spacer-x !default;
 
 // Card Columns
@@ -22,6 +21,8 @@ $card-columns-margin:       $card-spacer-y !default;
 // Colors
 $card-border-color:        rgba($black,.125) !default;
 $card-border-radius-inner: calc(#{$card-border-radius} - #{$card-border-width}) !default;
-$card-cap-bg:              gray("300") !default;
+$card-cap-bg:              gray(300) !default;
 $card-bg:                  color("white") !default;
 $card-link-hover-color:    color("white") !default;
+$card-default-header-bg:   gray(400) !default;
+$card-default-border:      gray(500) !default;

@@ -3,7 +3,7 @@
 
 @if $enable-framework == false {
   /*!
-   * StrapLess Cards v1.0 (http://github.com/strapless/card)
+   * StrapLess Card v1.0 (http://github.com/strapless/card)
    * Influenced by Bootstrap v4.0 (http://getbootstrap.com)
    * Licensed under MIT (https://github.com/strapless/card/blob/master/LICENSE)
    */
@@ -15,7 +15,7 @@
   flex-direction: column;
   background-color: $card-bg;
   @include border-radius($card-border-radius);
-  @if feature(shadows) {
+  @if theme("shadoows") {
     @include elevation(2);
   } @else {
     border: $card-border-width solid $card-border-color;
@@ -27,6 +27,17 @@
   // as much space as possible, ensuring footers are aligned to the bottom.
   flex: 1 1 auto;
   padding: $card-spacer-x;
+  @if component("grid") {
+    > .row, > hr {
+      margin-left: -$card-spacer-x;
+      margin-right: -$card-spacer-x;
+    }
+  } @else {
+    > hr {
+      margin-left: -$card-spacer-x;
+      margin-right: -$card-spacer-x;
+    }
+  }
 }
 
 .card-title {
@@ -66,7 +77,7 @@
   }
 }
 
-@if feature(grid) {
+@if component("grid") {
   .card .row > .columns {
     padding-left: $card-spacer-x;
     padding-right: $card-spacer-x;
@@ -85,6 +96,7 @@
   border-bottom: $card-border-width solid $card-border-color;
 
   h1,h2,h3,h4,h5,h6 {
+    margin-top: 0;
     margin-bottom: 0;
   }
 
@@ -210,14 +222,48 @@
   }
 }
 
+.card-panel {
+  .card-header {
+    display: flex;
+    align-items: center;
+    > .card-title {
+      margin-bottom: 0;
+      font-size: 1.15rem;
+      text-transform: none;
+    }
+    @if component("icons") {
+      @include card-panel-icons($card-spacer-x);
+    }
+    @if component("buttons") {
+      > .btn {
+        margin-left: auto;
+      }
+    }
+  }
+  .list-group-item {
+    border-left-color: transparent !important;
+    border-right-color: transparent !important;
+    padding-left: $card-spacer-x;
+    padding-right: $card-spacer-x;
+  }
+  > .list-group .list-group-item:first-child {
+    border-radius: 0;
+    border-top: 0;
+  }
+  .list-group:last-child .list-group-item:last-child {
+    border-bottom-width: 0;
+  }
+
+  &.card-default { @include card-header-variant($card-default-header-bg, gray(700),$card-default-border ); }
+}
+
 // Accordion Modifications
 .card-accordion {
   @include elevation(2);
-  @include border-radius($border-radius-base);
-  > .card-default .card-header, .card-header {
-    background-color: #eee;
-    border: $card-border-width solid lighten($card-border-color, 35%);
-    border-width: 1px 0;
+  @include border-radius($card-border-radius);
+  > .card-default .card-header {
+    border: 0 solid lighten($card-border-color, 35%);
+    border-top-width: 1px;
     border-radius: 0;
   }
   > .card {
@@ -229,21 +275,21 @@
         border-top: none;
       }
     }
-    @if feature(rounded) {
+    @if theme("rounded") {
       border-radius: 0;
       &:first-child, &:first-child .card-header {
-        border-top-left-radius: $border-radius-base;
-        border-top-right-radius: $border-radius-base;
+        border-top-left-radius: $card-border-radius;
+        border-top-right-radius: $card-border-radius;
       }
       &:last-child, &:last-child .card-header {
-        border-bottom-left-radius: $border-radius-base;
-        border-bottom-right-radius: $border-radius-base;
+        border-bottom-left-radius: $card-border-radius;
+        border-bottom-right-radius: $card-border-radius;
       }
     }
     .card-title {
       margin: ($card-spacer-y * -1) ($card-spacer-x * -1);
       @include truncate(unset, false);
-      flex: 0 1 100%;
+      flex: 1 1 100%;
       a[data-toggle="collapse"] {
         font-size: 1.15rem;
         text-decoration: none;
@@ -251,82 +297,14 @@
         position: relative;
         padding: $card-spacer-y $card-spacer-x;
         font-weight: 500;
-        color: darken($link-color, 15%);
         outline: 0;
         overflow: hidden;
         text-overflow: ellipsis;
-        &:before {
-          position: absolute;
-          right: $card-spacer-x;
-          color: $gray-600;
-          @include icon-font;
-          @include icon-content('chevron-down');
-          //font-size: $icon-font-size-base * 2;
-          @include opacity(.3);
-          line-height: 1;
-        }
-      }
-      a.collapsed:before {
-        @include icon-content('chevron-up');
       }
     }
   }
 }
 
-.card-widget {
-  background-color: $gray-300;
-  color: $gray-800;
-  border: none;
-  @include elevation(1);
-  &[data-toggle] {
-    cursor: pointer;
-  }
-  .card-block {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: rgba($white,.25);
-    > * {
-      margin: 0;
-      opacity: .5;
-    }
-  }
-  .card-footer {
-    background: transparent;
-    border-top-color: transparent;
-    padding-top: 0;
-    padding-bottom: 0;
-    display: flex;
-    align-items: center;
-    .widget-label {
-      font-size: .90rem;
-      font-weight: normal;
-      text-transform: uppercase;
-      padding: .5rem 0;
-      order: -1;
-    }
-  }
-  & + .card-widget {
-    margin-top: 1rem;
-  }
-  &.widget-primary {
-    background-color: theme-color("primary");
-  }
-}
-
-// Icons
-.card.card-icon {
-  > .card-header {
-    display: flex;
-    align-items: center;
-    > .#{$icon-css-prefix} {
-      order: -1;
-      flex: 0 0 auto;
-      top: 1px;
-      opacity: .3;
-      margin: 1px $card-spacer-x 0 0;
-      width: auto;
-
-    }
-  }
+@if component("icons") {
+  @include accordion-indicator($card-spacer-x);
 }

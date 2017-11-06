@@ -1,6 +1,5 @@
 // Card variants
 
-@import "strapless/base/scss/base";
 @import "card-variables";
 
 @mixin card-variant($background, $border) {
@@ -10,6 +9,22 @@
   .card-header,
   .card-footer {
     background-color: transparent;
+  }
+}
+
+@mixin card-header-variant($header-background, $header-color, $header-border-color: null) {
+  .card-header {
+    background-color: $header-background;
+    border-bottom: 1px solid $header-border-color;
+    > .card-title {
+      color: $header-color;
+    }
+    @if component("icons") {
+      > .#{$icon-css-prefix} {
+        fill: rgba($header-color, .3);
+        color: rgba($header-color, .3);
+      }
+    }
   }
 }
 
@@ -62,8 +77,11 @@
         flex: 1 0 0;
         flex-direction: column;
 
+        // Selectively apply horizontal margins to cards to avoid doing the
+        // negative margin dance like our grid. This differs from the grid
+        // due to the use of margins as gutters instead of padding.
         &:not(:first-child) { margin-left: $card-deck-margin; }
-        &:not(:last-child)  { margin-right: $card-deck-margin; }
+        &:not(:last-child) { margin-right: $card-deck-margin; }
       }
     }
 
@@ -81,7 +99,7 @@
         }
 
         // Handle rounded corners
-        @if feature(rounded) {
+        @if theme("rounded") {
           &:first-child {
             @include border-right-radius(0);
 
