@@ -15,7 +15,7 @@
   flex-direction: column;
   background-color: $card-bg;
   @include border-radius($card-border-radius);
-  @if theme("shadoows") {
+  @if theme("shadows") {
     @include elevation(2);
   } @else {
     border: $card-border-width solid $card-border-color;
