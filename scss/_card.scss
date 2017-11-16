@@ -3,7 +3,7 @@
 
 @if $enable-framework == false {
   /*!
-   * StrapLess Card v1.0.1 (http://github.com/strapless/card)
+   * StrapLess Card v1.0.2 (http://github.com/strapless/card)
    * Influenced by Bootstrap v4.0 (http://getbootstrap.com)
    * Licensed under MIT (https://github.com/strapless/card/blob/master/LICENSE)
    */
@@ -264,6 +264,7 @@
   > .card-default .card-header {
     border: 0 solid lighten($card-border-color, 35%);
     border-top-width: 1px;
+    border-bottom-width: 1px;
     border-radius: 0;
   }
   > .card {
