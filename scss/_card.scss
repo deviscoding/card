@@ -307,5 +307,5 @@
 }
 
 @if component("icons") {
-  @include accordion-indicator($card-spacer-x);
+  @include card-accordion-indicator($card-accordion-indicator, $card-accordion-indicator-size, $card-spacer-x);
 }
