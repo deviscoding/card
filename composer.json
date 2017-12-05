@@ -11,7 +11,7 @@
       "css"
   ],
   "homepage": "https://www.github.com/strapless/card",
-  "version": "1.0.2",
+  "version": "1.0.4",
   "authors": [
       {
           "name": "Aaron M Jones",
@@ -20,7 +20,7 @@
   ],
   "license": "MIT",
   "require": {
-    "strapless/base": "^1.0",
-    "strapless/colors": "^1.0"
+    "strapless/base": "^1.1.5",
+    "strapless/colors": "^1.0.5"
   }
 }

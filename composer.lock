@@ -1,0 +1,91 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "fe8902477ea5f92db40d3f680a39835b",
+    "packages": [
+        {
+            "name": "strapless/base",
+            "version": "1.1.5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/strapless/base.git",
+                "reference": "4f3b464eb4d196a71646dd29501d565b28cc60bd"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/strapless/base/zipball/4f3b464eb4d196a71646dd29501d565b28cc60bd",
+                "reference": "4f3b464eb4d196a71646dd29501d565b28cc60bd",
+                "shasum": ""
+            },
+            "type": "library",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Aaron M Jones",
+                    "homepage": "http://www.jonesiscoding.com"
+                }
+            ],
+            "description": "SASS Functions & mixins for managing variables within various SASS components.",
+            "homepage": "https://www.github.com/strapless/base",
+            "keywords": [
+                "css",
+                "maps",
+                "sass",
+                "scss",
+                "strapless",
+                "variables"
+            ],
+            "time": "2017-12-05T01:04:44+00:00"
+        },
+        {
+            "name": "strapless/colors",
+            "version": "1.0.5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/strapless/colors.git",
+                "reference": "3acc84557d0277cadd1d723a140a83b2092ffd22"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/strapless/colors/zipball/3acc84557d0277cadd1d723a140a83b2092ffd22",
+                "reference": "3acc84557d0277cadd1d723a140a83b2092ffd22",
+                "shasum": ""
+            },
+            "type": "library",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Aaron M Jones",
+                    "homepage": "http://www.jonesiscoding.com"
+                }
+            ],
+            "description": "SASS color functions, maps and CSS used in StrapLess components.  Can also be used quite effectively in any SASS where one desires an easy way to manage colors.",
+            "homepage": "https://www.github.com/strapless/colors",
+            "keywords": [
+                "color",
+                "map",
+                "sass",
+                "scss",
+                "strapless"
+            ],
+            "time": "2017-11-16T14:48:39+00:00"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": [],
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": []
+}

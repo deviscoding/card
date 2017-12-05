@@ -3,7 +3,7 @@
 
 @if $enable-framework == false {
   /*!
-   * StrapLess Card v1.0.2 (http://github.com/strapless/card)
+   * StrapLess Card v1.0.4 (http://github.com/strapless/card)
    * Influenced by Bootstrap v4.0 (http://getbootstrap.com)
    * Licensed under MIT (https://github.com/strapless/card/blob/master/LICENSE)
    */
@@ -231,7 +231,7 @@
       font-size: 1.15rem;
       text-transform: none;
     }
-    @if component("icons") {
+    @if component("icons") and mixin-exists(card-panel-icons) {
       @include card-panel-icons($card-spacer-x);
     }
     @if component("buttons") {
@@ -306,6 +306,6 @@
   }
 }
 
-@if component("icons") {
+@if component("icons") and mixin-exists(card-accordion-indicator) {
   @include card-accordion-indicator($card-accordion-indicator, $card-accordion-indicator-size, $card-spacer-x);
 }
