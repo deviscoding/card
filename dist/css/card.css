@@ -1,5 +1,5 @@
 /*!
-   * StrapLess Card v1.0.4 (http://github.com/strapless/card)
+   * StrapLess Card v1.0.5 (http://github.com/strapless/card)
    * Influenced by Bootstrap v4.0 (http://getbootstrap.com)
    * Licensed under MIT (https://github.com/strapless/card/blob/master/LICENSE)
    */
@@ -250,23 +250,22 @@
   display: -ms-flexbox;
   display: flex;
     flex-flow: row wrap;
+    margin-right: -1rem;
+    margin-left: -1rem;
   }
   .card-deck .card {
     display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-    -webkit-flex: 1 0 0;
-    -ms-flex: 1 0 0;
-    flex: 1 0 0;
+    -webkit-flex: 1 0 0%;
+    -ms-flex: 1 0 0%;
+    flex: 1 0 0%;
     -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  }
-  .card-deck .card:not(:first-child) {
-    margin-left: 1rem;
-  }
-  .card-deck .card:not(:last-child) {
     margin-right: 1rem;
+    margin-bottom: 0;
+    margin-left: 1rem;
   }
   .card-group {
     display: -webkit-flex;

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "fe8902477ea5f92db40d3f680a39835b",
+    "content-hash": "36581c27da59ffebebad405bfae41e34",
     "packages": [
         {
             "name": "strapless/base",
@@ -12,12 +12,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/strapless/base.git",
-                "reference": "4f3b464eb4d196a71646dd29501d565b28cc60bd"
+                "reference": "32ab7f32e6745e18ec46ca1e49e19e8ab347ec58"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/strapless/base/zipball/4f3b464eb4d196a71646dd29501d565b28cc60bd",
-                "reference": "4f3b464eb4d196a71646dd29501d565b28cc60bd",
+                "url": "https://api.github.com/repos/strapless/base/zipball/32ab7f32e6745e18ec46ca1e49e19e8ab347ec58",
+                "reference": "32ab7f32e6745e18ec46ca1e49e19e8ab347ec58",
                 "shasum": ""
             },
             "type": "library",
@@ -45,16 +45,16 @@
         },
         {
             "name": "strapless/colors",
-            "version": "1.0.5",
+            "version": "1.0.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/strapless/colors.git",
-                "reference": "3acc84557d0277cadd1d723a140a83b2092ffd22"
+                "reference": "a33fd13fd3a264145d1b8007e2c74a1d302f25d9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/strapless/colors/zipball/3acc84557d0277cadd1d723a140a83b2092ffd22",
-                "reference": "3acc84557d0277cadd1d723a140a83b2092ffd22",
+                "url": "https://api.github.com/repos/strapless/colors/zipball/a33fd13fd3a264145d1b8007e2c74a1d302f25d9",
+                "reference": "a33fd13fd3a264145d1b8007e2c74a1d302f25d9",
                 "shasum": ""
             },
             "type": "library",
@@ -77,7 +77,7 @@
                 "scss",
                 "strapless"
             ],
-            "time": "2017-11-16T14:48:39+00:00"
+            "time": "2017-12-05T15:09:02+00:00"
         }
     ],
     "packages-dev": [],
