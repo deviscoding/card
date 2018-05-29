@@ -1,7 +1,7 @@
 /*!
-   * StrapLess Card v1.0.5 (http://github.com/strapless/card)
+   * DevIsCoding Card v1.0.6 (http://github.com/deviscoding/card)
    * Influenced by Bootstrap v4.0 (http://getbootstrap.com)
-   * Licensed under MIT (https://github.com/strapless/card/blob/master/LICENSE)
+   * Licensed under MIT (https://github.com/deviscoding/card/blob/master/LICENSE)
    */
 .card {
   position: relative;
@@ -13,7 +13,7 @@
   flex-direction: column;
   background-color: #fff;
   border-radius: 4px;
-  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+  box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
 }
 
 .card-block {
@@ -244,7 +244,7 @@
   border-bottom-left-radius: calc(4px - 1px);
 }
 
-@media screen and (min-width: 577px) {
+@media (min-width: 577px) {
   .card-deck {
     display: -webkit-flex;
   display: -ms-flexbox;
@@ -368,7 +368,7 @@
 }
 
 .card-accordion {
-  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+  box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
   border-radius: 4px;
 }
 

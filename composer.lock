@@ -4,21 +4,24 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "36581c27da59ffebebad405bfae41e34",
+    "content-hash": "d85cd6ea3ecdcb61dc16615e6ae7119a",
     "packages": [
         {
-            "name": "strapless/base",
-            "version": "1.1.5",
+            "name": "deviscoding/base",
+            "version": "1.1.14",
             "source": {
                 "type": "git",
-                "url": "https://github.com/strapless/base.git",
-                "reference": "32ab7f32e6745e18ec46ca1e49e19e8ab347ec58"
+                "url": "https://github.com/deviscoding/base.git",
+                "reference": "49fa118ac7a4188f8da232910d449d5d8ba5cfa0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/strapless/base/zipball/32ab7f32e6745e18ec46ca1e49e19e8ab347ec58",
-                "reference": "32ab7f32e6745e18ec46ca1e49e19e8ab347ec58",
+                "url": "https://api.github.com/repos/deviscoding/base/zipball/49fa118ac7a4188f8da232910d449d5d8ba5cfa0",
+                "reference": "49fa118ac7a4188f8da232910d449d5d8ba5cfa0",
                 "shasum": ""
+            },
+            "replace": {
+                "strapless/base": "^1.1"
             },
             "type": "library",
             "notification-url": "https://packagist.org/downloads/",
@@ -32,7 +35,7 @@
                 }
             ],
             "description": "SASS Functions & mixins for managing variables within various SASS components.",
-            "homepage": "https://www.github.com/strapless/base",
+            "homepage": "https://www.github.com/deviscoding/base",
             "keywords": [
                 "css",
                 "maps",
@@ -41,21 +44,24 @@
                 "strapless",
                 "variables"
             ],
-            "time": "2017-12-05T01:04:44+00:00"
+            "time": "2018-05-24T12:29:40+00:00"
         },
         {
-            "name": "strapless/colors",
-            "version": "1.0.6",
+            "name": "deviscoding/colors",
+            "version": "1.0.9",
             "source": {
                 "type": "git",
-                "url": "https://github.com/strapless/colors.git",
-                "reference": "a33fd13fd3a264145d1b8007e2c74a1d302f25d9"
+                "url": "https://github.com/deviscoding/colors.git",
+                "reference": "dd4a6ee5aab611b0f4e7e2d1f8c481caa1203e39"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/strapless/colors/zipball/a33fd13fd3a264145d1b8007e2c74a1d302f25d9",
-                "reference": "a33fd13fd3a264145d1b8007e2c74a1d302f25d9",
+                "url": "https://api.github.com/repos/deviscoding/colors/zipball/dd4a6ee5aab611b0f4e7e2d1f8c481caa1203e39",
+                "reference": "dd4a6ee5aab611b0f4e7e2d1f8c481caa1203e39",
                 "shasum": ""
+            },
+            "replace": {
+                "strapless/colors": "^1.0"
             },
             "type": "library",
             "notification-url": "https://packagist.org/downloads/",
@@ -68,8 +74,8 @@
                     "homepage": "http://www.jonesiscoding.com"
                 }
             ],
-            "description": "SASS color functions, maps and CSS used in StrapLess components.  Can also be used quite effectively in any SASS where one desires an easy way to manage colors.",
-            "homepage": "https://www.github.com/strapless/colors",
+            "description": "SASS color functions, maps and CSS used in DevIsCoding components.  Can also be used quite effectively in any SASS where one desires an easy way to manage colors.",
+            "homepage": "https://www.github.com/deviscoding/colors",
             "keywords": [
                 "color",
                 "map",
@@ -77,7 +83,7 @@
                 "scss",
                 "strapless"
             ],
-            "time": "2017-12-05T15:09:02+00:00"
+            "time": "2018-05-23T15:47:48+00:00"
         }
     ],
     "packages-dev": [],

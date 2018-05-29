@@ -1,6 +1,6 @@
 {
-  "name": "strapless/card",
-  "description": "Card component from Bootstrap 4, modified for usage as a standalone component, with Bootstrap 3, or as part of the StrapLess framework.",
+  "name": "deviscoding/card",
+  "description": "Card component from Bootstrap 4, modified for usage as a standalone component, with Bootstrap 3, or with other DevIsCoding components.",
   "keywords": [
       "responsive",
       "card",
@@ -10,8 +10,8 @@
       "strapless",
       "css"
   ],
-  "homepage": "https://www.github.com/strapless/card",
-  "version": "1.0.5",
+  "homepage": "https://www.github.com/deviscoding/card",
+  "version": "1.0.6",
   "authors": [
       {
           "name": "Aaron M Jones",
@@ -19,8 +19,11 @@
       }
   ],
   "license": "MIT",
+  "replace": {
+    "strapless/card": "^1.0"
+  },
   "require": {
-    "strapless/base": "^1.1.5",
-    "strapless/colors": "^1.0.5"
+    "deviscoding/base": "^1.1.5",
+    "deviscoding/colors": "^1.0.5"
   }
 }
