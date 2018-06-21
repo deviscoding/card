@@ -23,7 +23,8 @@
     "strapless/card": "^1.0"
   },
   "require": {
-    "deviscoding/base": "^1.1.5",
-    "deviscoding/colors": "^1.0.5"
+    "deviscoding/base": "^2.0",
+    "deviscoding/colors": "^1.0.5",
+    "deviscoding/responsive": "^1.0"
   }
 }

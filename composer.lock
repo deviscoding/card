@@ -4,24 +4,24 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "d85cd6ea3ecdcb61dc16615e6ae7119a",
+    "content-hash": "8161e83c781c76c94470898a87a521b2",
     "packages": [
         {
             "name": "deviscoding/base",
-            "version": "1.1.14",
+            "version": "2.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/deviscoding/base.git",
-                "reference": "49fa118ac7a4188f8da232910d449d5d8ba5cfa0"
+                "reference": "422e043118fe98cef847f34a0b57c1f65f8c7fff"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/deviscoding/base/zipball/49fa118ac7a4188f8da232910d449d5d8ba5cfa0",
-                "reference": "49fa118ac7a4188f8da232910d449d5d8ba5cfa0",
+                "url": "https://api.github.com/repos/deviscoding/base/zipball/422e043118fe98cef847f34a0b57c1f65f8c7fff",
+                "reference": "422e043118fe98cef847f34a0b57c1f65f8c7fff",
                 "shasum": ""
             },
             "replace": {
-                "strapless/base": "^1.1"
+                "strapless/base": "^2.0"
             },
             "type": "library",
             "notification-url": "https://packagist.org/downloads/",
@@ -44,7 +44,7 @@
                 "strapless",
                 "variables"
             ],
-            "time": "2018-05-24T12:29:40+00:00"
+            "time": "2018-05-24T12:28:48+00:00"
         },
         {
             "name": "deviscoding/colors",
@@ -84,6 +84,97 @@
                 "strapless"
             ],
             "time": "2018-05-23T15:47:48+00:00"
+        },
+        {
+            "name": "deviscoding/device",
+            "version": "3.0.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/jonesiscoding/device.git",
+                "reference": "13c906e6307ad68a53c9cfb978f62445297db65c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/jonesiscoding/device/zipball/13c906e6307ad68a53c9cfb978f62445297db65c",
+                "reference": "13c906e6307ad68a53c9cfb978f62445297db65c",
+                "shasum": ""
+            },
+            "replace": {
+                "exactquery/xq-detect": "^3.0"
+            },
+            "suggest": {
+                "deviscoding/poly-pointer": "Psuedo-Polyfill for (pointer:coarse). Easy support of touch devices."
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "XQ\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "AMJones",
+                    "homepage": "http://www.deviscoding.com"
+                }
+            ],
+            "description": "Device feature detection via Vanilla JS with a PHP backup for server side detection.",
+            "homepage": "https://github.com/jonesiscoding/device",
+            "keywords": [
+                "browser",
+                "detection",
+                "device",
+                "feature",
+                "hidpi",
+                "javascript",
+                "php",
+                "retina",
+                "touch"
+            ],
+            "time": "2018-05-08T14:13:02+00:00"
+        },
+        {
+            "name": "deviscoding/responsive",
+            "version": "1.0.5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/deviscoding/responsive.git",
+                "reference": "ec64ef31ac68423474d2201a3f32dea2e4555ef6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/deviscoding/responsive/zipball/ec64ef31ac68423474d2201a3f32dea2e4555ef6",
+                "reference": "ec64ef31ac68423474d2201a3f32dea2e4555ef6",
+                "shasum": ""
+            },
+            "require": {
+                "deviscoding/base": "^2.0",
+                "deviscoding/device": "^3.0"
+            },
+            "type": "library",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Aaron M Jones",
+                    "homepage": "http://www.jonesiscoding.com"
+                }
+            ],
+            "description": "SASS utilities for responsive web design.",
+            "homepage": "https://www.github.com/deviscoding/responsive",
+            "keywords": [
+                "responsive",
+                "rwd",
+                "sass",
+                "scss",
+                "strapless"
+            ],
+            "time": "2018-06-20T13:09:01+00:00"
         }
     ],
     "packages-dev": [],

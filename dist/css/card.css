@@ -249,6 +249,8 @@
     display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+    -webkit-flex-flow: row wrap;
+    -ms-flex-flow: row wrap;
     flex-flow: row wrap;
     margin-right: -1rem;
     margin-left: -1rem;
@@ -271,6 +273,8 @@
     display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+    -webkit-flex-flow: row wrap;
+    -ms-flex-flow: row wrap;
     flex-flow: row wrap;
   }
   .card-group .card {

@@ -1,6 +1,7 @@
 // Card variants
 
 @import "card-variables";
+@import "deviscoding/responsive/scss/rwd-mixins";
 
 @mixin card-variant($background, $border) {
   background-color: $background;
